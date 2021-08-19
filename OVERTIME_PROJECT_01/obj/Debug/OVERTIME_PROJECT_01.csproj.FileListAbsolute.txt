@@ -1,4 +1,3 @@
-C:\Users\Angel Diesel\Desktop\Projeler\MESAI_FORM_PROJECT\OVERTTIME_FORM\OVERTIME_PROJECT_01\obj\Debug\OVERTIME_PROJECT_01.csprojAssemblyReference.cache
 C:\Users\Angel Diesel\Desktop\Projeler\MESAI_FORM_PROJECT\OVERTTIME_FORM\OVERTIME_PROJECT_01\obj\Debug\OVERTIME_PROJECT_01.Properties.Resources.resources
 C:\Users\Angel Diesel\Desktop\Projeler\MESAI_FORM_PROJECT\OVERTTIME_FORM\OVERTIME_PROJECT_01\obj\Debug\OVERTIME_PROJECT_01.csproj.GenerateResource.cache
 C:\Users\Angel Diesel\Desktop\Projeler\MESAI_FORM_PROJECT\OVERTTIME_FORM\OVERTIME_PROJECT_01\obj\Debug\OVERTIME_PROJECT_01.csproj.CoreCompileInputs.cache
@@ -9,3 +8,5 @@ C:\Users\Angel Diesel\Desktop\Projeler\MESAI_FORM_PROJECT\OVERTTIME_FORM\OVERTIM
 C:\Users\Angel Diesel\Desktop\Projeler\MESAI_FORM_PROJECT\OVERTTIME_FORM\OVERTIME_PROJECT_01\obj\Debug\OVERTIME_PROJECT_01.exe
 C:\Users\Angel Diesel\Desktop\Projeler\MESAI_FORM_PROJECT\OVERTTIME_FORM\OVERTIME_PROJECT_01\obj\Debug\OVERTIME_PROJECT_01.pdb
 C:\Users\Angel Diesel\Desktop\Projeler\MESAI_FORM_PROJECT\OVERTTIME_FORM\OVERTIME_PROJECT_01\obj\Debug\OVERTIME_PROJECT_01.FrmMesai.resources
+C:\Users\Angel Diesel\Desktop\Projeler\MESAI_FORM_PROJECT\OVERTTIME_FORM\OVERTIME_PROJECT_01\obj\Debug\OVERTIME_PROJECT_01.FrmDurumDegistir.resources
+C:\Users\Angel Diesel\Desktop\Projeler\MESAI_FORM_PROJECT\OVERTTIME_FORM\OVERTIME_PROJECT_01\obj\Debug\OVERTIME_PROJECT_01.csprojAssemblyReference.cache

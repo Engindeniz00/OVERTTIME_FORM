@@ -36,14 +36,29 @@ namespace OVERTIME_PROJECT_01
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.evetRadioButon = new System.Windows.Forms.RadioButton();
             this.hayirRadioButon = new System.Windows.Forms.RadioButton();
+            this.evetRadioButon = new System.Windows.Forms.RadioButton();
             this.personelKomboBox = new System.Windows.Forms.ComboBox();
             this.gorevTextBox = new System.Windows.Forms.TextBox();
             this.mesaiStarTime = new System.Windows.Forms.DateTimePicker();
             this.mesaiFinishTime = new System.Windows.Forms.DateTimePicker();
             this.mesaiSure = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.kaydetButton = new System.Windows.Forms.Button();
+            this.durumDegistir = new System.Windows.Forms.Button();
+            this.cikisButon = new System.Windows.Forms.Button();
+            this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label7 = new System.Windows.Forms.Label();
+            this.mesaiNedenText = new System.Windows.Forms.TextBox();
+            this.perAdi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.perGor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.starTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.finishTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.topMesSaat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.mesNeden = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.onayDurumu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.kaydedenPersonel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.durumId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -118,17 +133,6 @@ namespace OVERTIME_PROJECT_01
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
-            // evetRadioButon
-            // 
-            this.evetRadioButon.AutoSize = true;
-            this.evetRadioButon.Location = new System.Drawing.Point(19, 20);
-            this.evetRadioButon.Name = "evetRadioButon";
-            this.evetRadioButon.Size = new System.Drawing.Size(76, 29);
-            this.evetRadioButon.TabIndex = 0;
-            this.evetRadioButon.TabStop = true;
-            this.evetRadioButon.Text = "Evet";
-            this.evetRadioButon.UseVisualStyleBackColor = true;
-            // 
             // hayirRadioButon
             // 
             this.hayirRadioButon.AutoSize = true;
@@ -139,6 +143,17 @@ namespace OVERTIME_PROJECT_01
             this.hayirRadioButon.TabStop = true;
             this.hayirRadioButon.Text = "Hayır";
             this.hayirRadioButon.UseVisualStyleBackColor = true;
+            // 
+            // evetRadioButon
+            // 
+            this.evetRadioButon.AutoSize = true;
+            this.evetRadioButon.Location = new System.Drawing.Point(19, 20);
+            this.evetRadioButon.Name = "evetRadioButon";
+            this.evetRadioButon.Size = new System.Drawing.Size(76, 29);
+            this.evetRadioButon.TabIndex = 0;
+            this.evetRadioButon.TabStop = true;
+            this.evetRadioButon.Text = "Evet";
+            this.evetRadioButon.UseVisualStyleBackColor = true;
             // 
             // personelKomboBox
             // 
@@ -195,18 +210,150 @@ namespace OVERTIME_PROJECT_01
             // 
             // listView1
             // 
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.perAdi,
+            this.perGor,
+            this.starTime,
+            this.finishTime,
+            this.topMesSaat,
+            this.mesNeden,
+            this.onayDurumu,
+            this.Id,
+            this.kaydedenPersonel,
+            this.durumId});
+            this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(68, 390);
+            this.listView1.Location = new System.Drawing.Point(73, 701);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(953, 212);
+            this.listView1.Size = new System.Drawing.Size(1117, 251);
             this.listView1.TabIndex = 12;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // kaydetButton
+            // 
+            this.kaydetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kaydetButton.Location = new System.Drawing.Point(72, 616);
+            this.kaydetButton.Name = "kaydetButton";
+            this.kaydetButton.Size = new System.Drawing.Size(194, 69);
+            this.kaydetButton.TabIndex = 13;
+            this.kaydetButton.Text = "Kaydet";
+            this.kaydetButton.UseVisualStyleBackColor = true;
+            this.kaydetButton.Click += new System.EventHandler(this.kaydetButton_Click);
+            // 
+            // durumDegistir
+            // 
+            this.durumDegistir.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.durumDegistir.Location = new System.Drawing.Point(302, 616);
+            this.durumDegistir.Name = "durumDegistir";
+            this.durumDegistir.Size = new System.Drawing.Size(194, 69);
+            this.durumDegistir.TabIndex = 14;
+            this.durumDegistir.Text = "Durum Degistir";
+            this.durumDegistir.UseVisualStyleBackColor = true;
+            this.durumDegistir.Click += new System.EventHandler(this.durumDegistir_Click);
+            // 
+            // cikisButon
+            // 
+            this.cikisButon.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cikisButon.Location = new System.Drawing.Point(526, 614);
+            this.cikisButon.Name = "cikisButon";
+            this.cikisButon.Size = new System.Drawing.Size(194, 69);
+            this.cikisButon.TabIndex = 15;
+            this.cikisButon.Text = "Çıkış";
+            this.cikisButon.UseVisualStyleBackColor = true;
+            this.cikisButon.Click += new System.EventHandler(this.cikisButon_Click);
+            // 
+            // Id
+            // 
+            this.Id.Text = "0";
+            this.Id.Width = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(67, 407);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(144, 25);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Mesai Nedeni";
+            // 
+            // mesaiNedenText
+            // 
+            this.mesaiNedenText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.mesaiNedenText.Location = new System.Drawing.Point(418, 409);
+            this.mesaiNedenText.Multiline = true;
+            this.mesaiNedenText.Name = "mesaiNedenText";
+            this.mesaiNedenText.Size = new System.Drawing.Size(264, 157);
+            this.mesaiNedenText.TabIndex = 17;
+            // 
+            // perAdi
+            // 
+            this.perAdi.Text = "Personel Adı";
+            this.perAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.perAdi.Width = 100;
+            // 
+            // perGor
+            // 
+            this.perGor.Text = "Personel Gorev";
+            this.perGor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.perGor.Width = 150;
+            // 
+            // starTime
+            // 
+            this.starTime.Text = "Mesai Başlama Tarih/Saati";
+            this.starTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.starTime.Width = 200;
+            // 
+            // finishTime
+            // 
+            this.finishTime.Text = "Mesai Bitiş Tarih/Saati";
+            this.finishTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.finishTime.Width = 200;
+            // 
+            // topMesSaat
+            // 
+            this.topMesSaat.Text = "Toplam Mesai Saati";
+            this.topMesSaat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.topMesSaat.Width = 150;
+            // 
+            // mesNeden
+            // 
+            this.mesNeden.Text = "Mesai Nedeni";
+            this.mesNeden.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mesNeden.Width = 150;
+            // 
+            // onayDurumu
+            // 
+            this.onayDurumu.Text = "Onay Durumu";
+            this.onayDurumu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.onayDurumu.Width = 150;
+            // 
+            // kaydedenPersonel
+            // 
+            this.kaydedenPersonel.Text = "";
+            this.kaydedenPersonel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.kaydedenPersonel.Width = 0;
+            // 
+            // durumId
+            // 
+            this.durumId.Text = "";
+            this.durumId.Width = 0;
             // 
             // FrmMesai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1070, 616);
+            this.ClientSize = new System.Drawing.Size(1376, 986);
+            this.Controls.Add(this.mesaiNedenText);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cikisButon);
+            this.Controls.Add(this.durumDegistir);
+            this.Controls.Add(this.kaydetButton);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.mesaiSure);
             this.Controls.Add(this.mesaiFinishTime);
@@ -247,5 +394,20 @@ namespace OVERTIME_PROJECT_01
         private System.Windows.Forms.DateTimePicker mesaiFinishTime;
         private System.Windows.Forms.TextBox mesaiSure;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader Id;
+        private System.Windows.Forms.Button kaydetButton;
+        private System.Windows.Forms.Button durumDegistir;
+        private System.Windows.Forms.Button cikisButon;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox mesaiNedenText;
+        private System.Windows.Forms.ColumnHeader perAdi;
+        private System.Windows.Forms.ColumnHeader perGor;
+        private System.Windows.Forms.ColumnHeader starTime;
+        private System.Windows.Forms.ColumnHeader finishTime;
+        private System.Windows.Forms.ColumnHeader topMesSaat;
+        private System.Windows.Forms.ColumnHeader mesNeden;
+        private System.Windows.Forms.ColumnHeader onayDurumu;
+        private System.Windows.Forms.ColumnHeader kaydedenPersonel;
+        private System.Windows.Forms.ColumnHeader durumId;
     }
 }

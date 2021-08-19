@@ -118,7 +118,7 @@ namespace OVERTIME_PROJECT_01
 
         private void kullaniciKombox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (kullaniciKombox.SelectedIndex > 0)
+            if (kullaniciKombox.SelectedIndex > -1)
             {
                 sifreText.Focus();
 

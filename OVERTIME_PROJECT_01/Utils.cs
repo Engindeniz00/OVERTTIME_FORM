@@ -15,6 +15,10 @@ namespace OVERTIME_PROJECT_01
         public static int personelId;
         public static string personelKullaniciAdi;
         public static int personelTabloIndex;
+        public static int mesaiId;
+        public static int mesaiDurumId;
+        public static int onayId;
+        public static bool isSelected;
         #endregion variables
 
 
@@ -79,9 +83,10 @@ namespace OVERTIME_PROJECT_01
                 CloseConnection();
                 return true;
             }
-            catch
+            catch (Exception e)
             {
                 CloseConnection();
+                throw e;
                 return false;
             }
         }
