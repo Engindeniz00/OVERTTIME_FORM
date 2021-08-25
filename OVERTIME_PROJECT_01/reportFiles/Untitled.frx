@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="08/23/2021 14:37:03" ReportInfo.Modified="08/23/2021 17:57:12" ReportInfo.CreatorVersion="1.0.0.0">
+  <Dictionary>
+    <MsSqlDataConnection Name="db_Overtime" ConnectionString="rijcmlq+rW0RkboK+/8CKGGYUID3ctBV8q9SvKYxl3iiE7vBnh7Tgou0+4WFf3NfmPSvHVFarKFylJRgJhDC0PRDJPC/VOi4UxzEQp0A4lkTRdbxRVdvaPanaZ+BOTa9cE+x3UeGclxQpPU+MrqADJXoZqWNrTEs6XE/7xIZXbHoOgvVbCC7yq0rVHhbjZNr21VbiAa">
+      <TableDataSource Name="Table" Alias="ALL_IN_ONE" DataType="System.Int32" Enabled="true" SelectCommand="SELECT mes.*,cal.*,dur.*,gor.*,imz.* FROM dbMesai as mes &#13;&#10;INNER JOIN dbCalisan as cal ON mes.CalisanId = cal.Id&#13;&#10;INNER JOIN dbDurum as dur ON mes.MesaiDurumId = dur.Id&#13;&#10;INNER JOIN dbGorev as gor ON gor.Id = cal.PersonelGorevId&#13;&#10;LEFT JOIN dbImza as imz ON imz.MesaiId = mes.Id&#13;&#10;WHERE dur.Id = 1">
+        <Column Name="Id" DataType="System.Int32"/>
+        <Column Name="MesaiBaslamaTarihiSaat" DataType="System.DateTime"/>
+        <Column Name="MesaiBitisTarihiSaat" DataType="System.DateTime"/>
+        <Column Name="MesaiNedeni" DataType="System.String"/>
+        <Column Name="MesaiSure" DataType="System.String"/>
+        <Column Name="MesaiTuru" DataType="System.String"/>
+        <Column Name="CalisanId" DataType="System.Int32"/>
+        <Column Name="MesaiDurumId" DataType="System.Int32"/>
+        <Column Name="MesaiIptalNedenText" DataType="System.String"/>
+        <Column Name="PersonelId" DataType="System.Int32" PropName="Id1"/>
+        <Column Name="PersonelAdiSoyadi" DataType="System.String"/>
+        <Column Name="PersonelSifre" DataType="System.String"/>
+        <Column Name="PersonelGorevId" DataType="System.Int32"/>
+        <Column Name="DurumId" DataType="System.Int32" PropName="Id2"/>
+        <Column Name="DurumKodu" DataType="System.String"/>
+        <Column Name="DurumAdi" DataType="System.String"/>
+        <Column Name="GorevId" DataType="System.Int32" PropName="Id3"/>
+        <Column Name="GorevKodu" DataType="System.String"/>
+        <Column Name="GorevAdi" DataType="System.String"/>
+        <Column Name="ImzaId" DataType="System.Int32" PropName="Id4"/>
+        <Column Name="ImzaGoruntu" DataType="System.Byte[]" BindableControl="Picture"/>
+        <Column Name="MesaiId" DataType="System.Int32"/>
+      </TableDataSource>
+    </MsSqlDataConnection>
+    <TableDataSource Name="Categories" ReferenceName="NorthWind.Categories" DataType="System.Int32" Enabled="true">
+      <Column Name="CategoryID" DataType="System.Int32"/>
+      <Column Name="CategoryName" DataType="System.String"/>
+      <Column Name="Description" DataType="System.String"/>
+      <Column Name="Picture" DataType="System.Byte[]" BindableControl="Picture"/>
+    </TableDataSource>
+    <TableDataSource Name="Customers" ReferenceName="NorthWind.Customers" DataType="System.Int32" Enabled="true">
+      <Column Name="CustomerID" DataType="System.String"/>
+      <Column Name="CompanyName" DataType="System.String"/>
+      <Column Name="ContactName" DataType="System.String"/>
+      <Column Name="ContactTitle" DataType="System.String"/>
+      <Column Name="Address" DataType="System.String"/>
+      <Column Name="City" DataType="System.String"/>
+      <Column Name="Region" DataType="System.String"/>
+      <Column Name="PostalCode" DataType="System.String"/>
+      <Column Name="Country" DataType="System.String"/>
+      <Column Name="Phone" DataType="System.String"/>
+      <Column Name="Fax" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="Employees" ReferenceName="NorthWind.Employees" DataType="System.Int32" Enabled="true">
+      <Column Name="EmployeeID" DataType="System.Int32"/>
+      <Column Name="LastName" DataType="System.String"/>
+      <Column Name="FirstName" DataType="System.String"/>
+      <Column Name="Title" DataType="System.String"/>
+      <Column Name="TitleOfCourtesy" DataType="System.String"/>
+      <Column Name="BirthDate" DataType="System.DateTime"/>
+      <Column Name="HireDate" DataType="System.DateTime"/>
+      <Column Name="Address" DataType="System.String"/>
+      <Column Name="City" DataType="System.String"/>
+      <Column Name="Region" DataType="System.String"/>
+      <Column Name="PostalCode" DataType="System.String"/>
+      <Column Name="Country" DataType="System.String"/>
+      <Column Name="HomePhone" DataType="System.String"/>
+      <Column Name="Extension" DataType="System.String"/>
+      <Column Name="Photo" DataType="System.Byte[]" BindableControl="Picture"/>
+      <Column Name="Notes" DataType="System.String"/>
+      <Column Name="ReportsTo" DataType="System.Int32"/>
+    </TableDataSource>
+    <TableDataSource Name="Order Details" ReferenceName="NorthWind.Order Details" DataType="System.Int32" Enabled="true">
+      <Column Name="OrderID" DataType="System.Int32"/>
+      <Column Name="ProductID" DataType="System.Int32"/>
+      <Column Name="UnitPrice" DataType="System.Decimal"/>
+      <Column Name="Quantity" DataType="System.Int16"/>
+      <Column Name="Discount" DataType="System.Single"/>
+    </TableDataSource>
+    <TableDataSource Name="Orders" ReferenceName="NorthWind.Orders" DataType="System.Int32" Enabled="true">
+      <Column Name="OrderID" DataType="System.Int32"/>
+      <Column Name="CustomerID" DataType="System.String"/>
+      <Column Name="EmployeeID" DataType="System.Int32"/>
+      <Column Name="OrderDate" DataType="System.DateTime"/>
+      <Column Name="RequiredDate" DataType="System.DateTime"/>
+      <Column Name="ShippedDate" DataType="System.DateTime"/>
+      <Column Name="ShipVia" DataType="System.Int32"/>
+      <Column Name="Freight" DataType="System.Decimal"/>
+      <Column Name="ShipName" DataType="System.String"/>
+      <Column Name="ShipAddress" DataType="System.String"/>
+      <Column Name="ShipCity" DataType="System.String"/>
+      <Column Name="ShipRegion" DataType="System.String"/>
+      <Column Name="ShipPostalCode" DataType="System.String"/>
+      <Column Name="ShipCountry" DataType="System.String"/>
+      <Column Name="Latitude" DataType="System.Double"/>
+      <Column Name="Longitude" DataType="System.Double"/>
+    </TableDataSource>
+    <TableDataSource Name="Products" ReferenceName="NorthWind.Products" DataType="System.Int32" Enabled="true">
+      <Column Name="ProductID" DataType="System.Int32"/>
+      <Column Name="ProductName" DataType="System.String"/>
+      <Column Name="SupplierID" DataType="System.Int32"/>
+      <Column Name="CategoryID" DataType="System.Int32"/>
+      <Column Name="QuantityPerUnit" DataType="System.String"/>
+      <Column Name="UnitPrice" DataType="System.Decimal"/>
+      <Column Name="UnitsInStock" DataType="System.Int16"/>
+      <Column Name="UnitsOnOrder" DataType="System.Int16"/>
+      <Column Name="ReorderLevel" DataType="System.Int16"/>
+      <Column Name="Discontinued" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="EAN13" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="Shippers" ReferenceName="NorthWind.Shippers" DataType="System.Int32" Enabled="true">
+      <Column Name="ShipperID" DataType="System.Int32"/>
+      <Column Name="CompanyName" DataType="System.String"/>
+      <Column Name="Phone" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="Suppliers" ReferenceName="NorthWind.Suppliers" DataType="System.Int32" Enabled="true">
+      <Column Name="SupplierID" DataType="System.Int32"/>
+      <Column Name="CompanyName" DataType="System.String"/>
+      <Column Name="ContactName" DataType="System.String"/>
+      <Column Name="ContactTitle" DataType="System.String"/>
+      <Column Name="Address" DataType="System.String"/>
+      <Column Name="City" DataType="System.String"/>
+      <Column Name="Region" DataType="System.String"/>
+      <Column Name="PostalCode" DataType="System.String"/>
+      <Column Name="Country" DataType="System.String"/>
+      <Column Name="Phone" DataType="System.String"/>
+      <Column Name="Fax" DataType="System.String"/>
+      <Column Name="HomePage" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="MatrixDemo" ReferenceName="NorthWind.MatrixDemo" DataType="System.Int32" Enabled="true">
+      <Column Name="Name" DataType="System.String"/>
+      <Column Name="Year" DataType="System.Int32"/>
+      <Column Name="Month" DataType="System.Int32"/>
+      <Column Name="ItemsSold" DataType="System.Int32"/>
+      <Column Name="Revenue" DataType="System.Decimal"/>
+    </TableDataSource>
+    <TableDataSource Name="Unicode" ReferenceName="NorthWind.Unicode" DataType="System.Int32" Enabled="true">
+      <Column Name="Name" DataType="System.String"/>
+      <Column Name="UnicodeName" DataType="System.String"/>
+      <Column Name="Text" DataType="System.String"/>
+      <Column Name="Rtl" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="Active" DataType="System.Boolean" BindableControl="CheckBox"/>
+    </TableDataSource>
+    <BusinessObjectDataSource Name="Categories BusinessObject" ReferenceName="Categories BusinessObject" DataType="System.Collections.Generic.List`1[[DemoNew.DemoModel.Model+Category, Demo New, Version=2021.3.28.0, Culture=neutral, PublicKeyToken=null]]" Enabled="true">
+      <Column Name="Name" DataType="System.String"/>
+      <Column Name="Description" DataType="System.String"/>
+      <BusinessObjectDataSource Name="Products1" Alias="Products" DataType="System.Collections.Generic.List`1[[DemoNew.DemoModel.Model+Product, Demo New, Version=2021.3.28.0, Culture=neutral, PublicKeyToken=null]]" PropName="Products" Enabled="true">
+        <Column Name="Name" DataType="System.String"/>
+        <Column Name="UnitPrice" DataType="System.Decimal"/>
+      </BusinessObjectDataSource>
+    </BusinessObjectDataSource>
+    <Relation Name="dbCalisan_dbMesai" ParentDataSource="null" ChildDataSource="null" ParentColumns="Id" ChildColumns="CalisanId" Enabled="true"/>
+    <Relation Name="dbImza_dbMesai" ParentDataSource="null" ChildDataSource="null" ParentColumns="MesaiId" ChildColumns="Id" Enabled="true"/>
+    <Relation Name="dbGorev_dbCalisan1" ParentDataSource="null" ChildDataSource="null" ParentColumns="Id" ChildColumns="PersonelGorevId" Enabled="true"/>
+    <Relation Name="dbDurum_dbMesai" ParentDataSource="null" ChildDataSource="null" ParentColumns="Id" ChildColumns="MesaiDurumId" Enabled="true"/>
+  </Dictionary>
+  <ReportPage Name="Page1" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="85.05">
+      <TextObject Name="Text1" Left="94.5" Top="18.9" Width="529.2" Height="47.25" Text="FAZLADAN MESAİ RAPORLARI" Font="Arial Rounded MT Bold, 24pt"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="88.25" Width="718.2" Height="47.25">
+      <TextObject Name="Text2" Left="18.9" Top="9.45" Width="189" Height="28.35" Text="MESAİ BİLDİRMİ" Font="Arial Rounded MT Bold, 16.2pt"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="138.7" Width="718.2" Height="387.45" Border.Lines="Top, Bottom" DataSource="Table">
+      <TextObject Name="Text3" Left="18.9" Top="9.45" Width="170.1" Height="28.35" Text="Çalışan Adı/Soyadı : &#13;&#10;" VertAlign="Center" Font="Arial Rounded MT Bold, 12pt"/>
+      <TextObject Name="Text4" Left="189" Top="9.45" Width="340.2" Height="28.35" Text="[ALL_IN_ONE.PersonelAdiSoyadi]" VertAlign="Center" Font="Arial Rounded MT Bold, 12pt"/>
+      <TextObject Name="Text5" Left="18.9" Top="264.6" Width="170.1" Height="37.8" Text="İzin Olarak Kullanılacak :" VertAlign="Center" Font="Arial Rounded MT Bold, 12pt"/>
+      <TextObject Name="Text6" Left="189" Top="274.05" Width="179.55" Height="28.35" Text="[ALL_IN_ONE.MesaiTuru]" VertAlign="Bottom" Font="Arial Rounded MT Bold, 12pt"/>
+      <TextObject Name="Text7" Left="18.9" Top="56.7" Width="170.1" Height="28.35" Text="Çalışan Görevi :" VertAlign="Center" Font="Arial Rounded MT Bold, 12pt"/>
+      <TextObject Name="Text8" Left="189" Top="56.7" Width="340.2" Height="28.35" Text="[ALL_IN_ONE.GorevAdi]" VertAlign="Center" Font="Arial Rounded MT Bold, 12pt"/>
+      <TextObject Name="Text9" Left="18.9" Top="103.95" Width="170.1" Height="37.8" Text="Mesai Başlangıç Tarih/Saat :" VertAlign="Center" Font="Arial Rounded MT Bold, 12pt"/>
+      <TextObject Name="Text10" Left="189" Top="113.4" Width="340.2" Height="28.35" Text="[ALL_IN_ONE.MesaiBaslamaTarihiSaat]" VertAlign="Center" Font="Arial Rounded MT Bold, 12pt"/>
+      <TextObject Name="Text11" Left="18.9" Top="160.65" Width="170.1" Height="37.8" Text="Mesai Bitiş Tarih/Saat :" VertAlign="Center" Font="Arial Rounded MT Bold, 12pt"/>
+      <TextObject Name="Text12" Left="189" Top="170.1" Width="340.2" Height="28.35" Text="[ALL_IN_ONE.MesaiBitisTarihiSaat]" VertAlign="Center" Font="Arial Rounded MT Bold, 12pt"/>
+      <TextObject Name="Text13" Left="18.9" Top="217.35" Width="170.1" Height="28.35" Text="Mesai Süresi : " VertAlign="Center" Font="Arial Rounded MT Bold, 12pt"/>
+      <TextObject Name="Text14" Left="189" Top="217.35" Width="217.35" Height="28.35" Text="[ALL_IN_ONE.MesaiSure]" VertAlign="Center" Font="Arial Rounded MT Bold, 12pt"/>
+      <TextObject Name="Text15" Left="519.75" Top="75.6" Width="113.4" Height="28.35" Text="Çalışan İmza" VertAlign="Center" Font="Arial Rounded MT Bold, 12pt"/>
+      <PictureObject Name="Picture1" Left="472.5" Top="122.85" Width="217.35" Height="122.85" DataColumn="ALL_IN_ONE.ImzaGoruntu"/>
+      <TextObject Name="Text16" Left="18.9" Top="321.3" Width="207.9" Height="28.35" Text="Mesai Nedeni :" VertAlign="Center" Font="Arial Rounded MT Bold, 12pt"/>
+      <TextObject Name="Text17" Left="189" Top="321.3" Width="340.2" Height="56.7" Text="[ALL_IN_ONE.MesaiNedeni]" Padding="2, 4, 2, 0" Font="Arial Rounded MT Bold, 12pt"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="529.35" Width="718.2" Height="28.35"/>
+  </ReportPage>
+  <DialogPage Name="Form1" AcceptButton="btnOk" CancelButton="btnCancel" AutoScaleDimensions="120, 120" ClientSize="365, 332">
+    <ButtonControl Name="btnOk" Left="158" Top="294" Width="94" Height="29" Anchor="Bottom, Right" TabIndex="0" Text="OK" DialogResult="OK"/>
+    <ButtonControl Name="btnCancel" Left="261" Top="294" Width="94" Height="29" Anchor="Bottom, Right" TabIndex="1" Text="Cancel" DialogResult="Cancel"/>
+  </DialogPage>
+</Report>

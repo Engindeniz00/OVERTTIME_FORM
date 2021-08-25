@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="report1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>710, 17</value>
+  </metadata>
+  <data name="report1.ReportResourceString" xml:space="preserve">
+    <value>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;Report ScriptLanguage="CSharp" ReportInfo.Created="08/23/2021 23:12:42" ReportInfo.Modified="08/25/2021 12:07:18" ReportInfo.CreatorVersion="2021.3.28.0"&gt;
+  &lt;Dictionary&gt;
+    &lt;TableDataSource Name="dbOverShiftAllDatas" ReferenceName="dataSet1.dbOverShiftAllDatas" DataType="System.Int32" Enabled="true"&gt;
+      &lt;Column Name="Id" DataType="System.Int32"/&gt;
+      &lt;Column Name="MesaiBaslamaTarihiSaat" DataType="System.DateTime"/&gt;
+      &lt;Column Name="MesaiBitisTarihiSaat" DataType="System.DateTime"/&gt;
+      &lt;Column Name="MesaiNedeni" DataType="System.String"/&gt;
+      &lt;Column Name="MesaiSure" DataType="System.String"/&gt;
+      &lt;Column Name="MesaiTuru" DataType="System.String"/&gt;
+      &lt;Column Name="CalisanId" DataType="System.Int32"/&gt;
+      &lt;Column Name="MesaiDurumId" DataType="System.Int32"/&gt;
+      &lt;Column Name="MesaiIptalNedenText" DataType="System.String"/&gt;
+      &lt;Column Name="PersonelAdiSoyadi" DataType="System.String"/&gt;
+      &lt;Column Name="PersonelSifre" DataType="System.String"/&gt;
+      &lt;Column Name="PersonelGorevId" DataType="System.Int32"/&gt;
+      &lt;Column Name="GorevKodu" DataType="System.String"/&gt;
+      &lt;Column Name="GorevAdi" DataType="System.String"/&gt;
+      &lt;Column Name="DurumKodu" DataType="System.String"/&gt;
+      &lt;Column Name="DurumAdi" DataType="System.String"/&gt;
+      &lt;Column Name="ImzaGoruntu" DataType="System.Byte[]" BindableControl="Picture"/&gt;
+      &lt;Column Name="MesaiId" DataType="System.Int32"/&gt;
+      &lt;Column Name="PersonelId" DataType="System.Int32"/&gt;
+      &lt;Column Name="GorevId" DataType="System.Int32"/&gt;
+      &lt;Column Name="DurumId" DataType="System.Int32"/&gt;
+      &lt;Column Name="ImzaId" DataType="System.Int32"/&gt;
+    &lt;/TableDataSource&gt;
+  &lt;/Dictionary&gt;
+  &lt;ReportPage Name="Page1" Fill="Glass" Fill.Color="White" Fill.Blend="0.2" Fill.Hatch="true" Watermark.Font="Arial, 60pt"&gt;
+    &lt;ReportTitleBand Name="ReportTitle1" Width="718.2" Height="28.35"&gt;
+      &lt;TextObject Name="Text1" Left="245.7" Top="-18.9" Width="245.7" Height="28.35" Text="MESAİ FORMU" HorzAlign="Center" Font="Arial Black, 16.2pt, style=Bold"/&gt;
+    &lt;/ReportTitleBand&gt;
+    &lt;PageHeaderBand Name="PageHeader1" Top="31.55" Width="718.2" Height="9.45"/&gt;
+    &lt;GroupHeaderBand Name="GroupHeader1" Top="44.2" Width="718.2" Height="37.8" Fill="LinearGradient" Fill.StartColor="SteelBlue" Fill.EndColor="White" Fill.Angle="0" Fill.Focus="1" Fill.Contrast="0.55" Condition="[dbOverShiftAllDatas.Id]"&gt;
+      &lt;TextObject Name="Text2" Left="28.35" Width="519.75" Height="37.8" Text="[dbOverShiftAllDatas.PersonelAdiSoyadi]" VertAlign="Center" Font="Arial Black, 16.2pt, style=Bold" TextFill.Color="BlanchedAlmond"/&gt;
+      &lt;DataBand Name="Data1" Top="85.2" Width="718.2" Height="189" Fill="PathGradient" Fill.CenterColor="LightSkyBlue" Fill.EdgeColor="White" Fill.Style="Elliptic" DataSource="dbOverShiftAllDatas"&gt;
+        &lt;TextObject Name="Text3" Left="274.05" Top="37.8" Width="368.55" Height="18.9" Text="[dbOverShiftAllDatas.MesaiBaslamaTarihiSaat]" Format="Date" Format.Format="f" Font="Arial Black, 10.2pt, style=Bold"/&gt;
+        &lt;TextObject Name="Text5" Left="28.35" Top="37.8" Width="217.35" Height="18.9" Text="Mesai Başlama Tarih/Saat : " HorzAlign="Right" Font="Arial Black, 10.2pt, style=Bold"/&gt;
+        &lt;TextObject Name="Text6" Left="274.05" Top="66.15" Width="349.65" Height="18.9" Text="[dbOverShiftAllDatas.MesaiBitisTarihiSaat]" Format="Date" Format.Format="f" Font="Arial Black, 10.2pt, style=Bold"/&gt;
+        &lt;TextObject Name="Text7" Left="28.35" Top="66.15" Width="217.35" Height="18.9" Text="Mesai Bitiş Tarih/Saat : " HorzAlign="Right" Font="Arial Black, 10.2pt, style=Bold"/&gt;
+        &lt;TextObject Name="Text8" Left="274.05" Top="94.5" Width="349.65" Height="18.9" Text="[dbOverShiftAllDatas.MesaiSure]" Format="Date" Format.Format="d" Font="Arial Black, 10.2pt, style=Bold"/&gt;
+        &lt;TextObject Name="Text9" Left="28.35" Top="94.5" Width="217.35" Height="18.9" Text="Mesai Süre : " HorzAlign="Right" Font="Arial Black, 10.2pt, style=Bold"/&gt;
+        &lt;TextObject Name="Text10" Left="274.05" Top="122.85" Width="349.65" Height="18.9" Text="[dbOverShiftAllDatas.MesaiTuru]" Format="Date" Format.Format="d" Font="Arial Black, 10.2pt, style=Bold"/&gt;
+        &lt;TextObject Name="Text11" Left="28.35" Top="122.85" Width="217.35" Height="18.9" Text="İzin Olarak Kullanılacak : " HorzAlign="Right" Font="Arial Black, 10.2pt, style=Bold"/&gt;
+        &lt;TextObject Name="Text12" Left="274.05" Top="151.2" Width="349.65" Height="18.9" Text="[dbOverShiftAllDatas.MesaiNedeni]" Format="Date" Format.Format="d" Font="Arial Black, 10.2pt, style=Bold"/&gt;
+        &lt;TextObject Name="Text13" Left="28.35" Top="151.2" Width="217.35" Height="18.9" Text="Mesai Neden : " HorzAlign="Right" Font="Arial Black, 10.2pt, style=Bold"/&gt;
+        &lt;TextObject Name="Text14" Left="274.05" Top="9.45" Width="368.55" Height="18.9" Text="[dbOverShiftAllDatas.GorevAdi]" Format="Date" Format.Format="d" Font="Arial Black, 10.2pt, style=Bold"/&gt;
+        &lt;TextObject Name="Text15" Left="28.35" Top="9.45" Width="217.35" Height="18.9" Text="Görev  :" HorzAlign="Right" Font="Arial Black, 10.2pt, style=Bold"/&gt;
+        &lt;PictureObject Name="Picture1" Left="500.85" Top="75.6" Width="207.9" Height="113.4" DataColumn="dbOverShiftAllDatas.ImzaGoruntu"/&gt;
+        &lt;TextObject Name="Text16" Left="548.1" Top="47.25" Width="132.3" Height="18.9" Text="PERSONEL İMZA" HorzAlign="Center" Font="Arial, 10.2pt, style=Bold"/&gt;
+      &lt;/DataBand&gt;
+      &lt;GroupFooterBand Name="GroupFooter1" Top="277.4" Width="718.2" Height="9.45"/&gt;
+    &lt;/GroupHeaderBand&gt;
+    &lt;PageFooterBand Name="PageFooter1" Top="290.05" Width="718.2" Height="28.35"/&gt;
+  &lt;/ReportPage&gt;
+&lt;/Report&gt;
+</value>
+  </data>
+  <metadata name="dataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="dbOverShiftAllDatasBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>133, 17</value>
+  </metadata>
+  <metadata name="dbOverShiftAllDatasTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>425, 17</value>
+  </metadata>
+</root>

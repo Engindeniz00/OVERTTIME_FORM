@@ -55,7 +55,7 @@ namespace OVERTIME_PROJECT_01
                 {
                     if (iptalNedenText.Text.Length > 5)
                     {
-                        sorgu = string.Format(@"UPDATE dbMesai SET MesaiDurumId = 2 WHERE Id = {0}", Utils.mesaiId);
+                        sorgu = string.Format(@"UPDATE dbMesai SET MesaiDurumId = 2, MesaiIptalNedenText = '{0}' WHERE Id = {1}",iptalNedenText.Text,   Utils.mesaiId);
                         kont = true;
                     }
                     else
@@ -159,6 +159,15 @@ namespace OVERTIME_PROJECT_01
         private void cikisButon_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmSignature frmSignature = new FrmSignature();
+            Hide();
+            frmSignature.ShowDialog();
+            Show();
+            FrmDurumDegistir_Load(sender,e);
         }
     }
     

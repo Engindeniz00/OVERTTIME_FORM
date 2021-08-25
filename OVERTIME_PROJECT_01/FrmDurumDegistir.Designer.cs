@@ -35,6 +35,7 @@ namespace OVERTIME_PROJECT_01
             this.iptalNedenText = new System.Windows.Forms.TextBox();
             this.onaylaButon = new System.Windows.Forms.Button();
             this.cikisButon = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -81,9 +82,9 @@ namespace OVERTIME_PROJECT_01
             // onaylaButon
             // 
             this.onaylaButon.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.onaylaButon.Location = new System.Drawing.Point(75, 337);
+            this.onaylaButon.Location = new System.Drawing.Point(25, 337);
             this.onaylaButon.Name = "onaylaButon";
-            this.onaylaButon.Size = new System.Drawing.Size(250, 74);
+            this.onaylaButon.Size = new System.Drawing.Size(215, 74);
             this.onaylaButon.TabIndex = 4;
             this.onaylaButon.Text = "ONAYLA";
             this.onaylaButon.UseVisualStyleBackColor = true;
@@ -92,19 +93,31 @@ namespace OVERTIME_PROJECT_01
             // cikisButon
             // 
             this.cikisButon.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cikisButon.Location = new System.Drawing.Point(349, 337);
+            this.cikisButon.Location = new System.Drawing.Point(246, 337);
             this.cikisButon.Name = "cikisButon";
-            this.cikisButon.Size = new System.Drawing.Size(250, 74);
+            this.cikisButon.Size = new System.Drawing.Size(215, 74);
             this.cikisButon.TabIndex = 5;
             this.cikisButon.Text = "ÇIKIŞ";
             this.cikisButon.UseVisualStyleBackColor = true;
             this.cikisButon.Click += new System.EventHandler(this.cikisButon_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(467, 337);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(215, 74);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "İMZA";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmDurumDegistir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 467);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cikisButon);
             this.Controls.Add(this.onaylaButon);
             this.Controls.Add(this.iptalNedenText);
@@ -127,5 +140,6 @@ namespace OVERTIME_PROJECT_01
         private System.Windows.Forms.TextBox iptalNedenText;
         private System.Windows.Forms.Button onaylaButon;
         private System.Windows.Forms.Button cikisButon;
+        private System.Windows.Forms.Button button1;
     }
 }

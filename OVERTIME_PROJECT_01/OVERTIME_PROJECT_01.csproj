@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="FastReport, Version=2021.3.28.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\FastReports\FastReport.Net Trial\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Bars, Version=2021.3.28.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c" />
+    <Reference Include="FastReport.DataVisualization, Version=2021.2.0.0, Culture=neutral, PublicKeyToken=5ceb240df42bf6e8" />
+    <Reference Include="FastReport.Editor, Version=2021.3.28.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,11 +57,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FrmDurumDegistir.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmDurumDegistir.Designer.cs">
       <DependentUpon>FrmDurumDegistir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFastReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFastReport.Designer.cs">
+      <DependentUpon>FrmFastReport.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -58,11 +83,23 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMailGonder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMailGonder.Designer.cs">
+      <DependentUpon>FrmMailGonder.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMesai.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMesai.Designer.cs">
       <DependentUpon>FrmMesai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSignature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSignature.Designer.cs">
+      <DependentUpon>FrmSignature.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,11 +107,20 @@
     <EmbeddedResource Include="FrmDurumDegistir.resx">
       <DependentUpon>FrmDurumDegistir.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmFastReport.resx">
+      <DependentUpon>FrmFastReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMailGonder.resx">
+      <DependentUpon>FrmMailGonder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMesai.resx">
       <DependentUpon>FrmMesai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSignature.resx">
+      <DependentUpon>FrmSignature.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -84,7 +130,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -97,6 +155,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\screen-1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

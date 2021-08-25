@@ -3,13 +3,29 @@
   <Profiles />
   <Settings>
     <Setting Name="UserName" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;Report ScriptLanguage="CSharp" ReportInfo.Created="08/23/2021 22:31:42" ReportInfo.Modified="08/23/2021 22:31:42" ReportInfo.CreatorVersion="2021.3.28.0"&gt;
+  &lt;Dictionary/&gt;
+&lt;/Report&gt;
+</Value>
     </Setting>
     <Setting Name="Password" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;Report ScriptLanguage="CSharp" ReportInfo.Created="08/23/2021 22:31:43" ReportInfo.Modified="08/23/2021 22:31:47" ReportInfo.CreatorVersion="2021.3.28.0"&gt;
+  &lt;Dictionary/&gt;
+&lt;/Report&gt;
+</Value>
     </Setting>
     <Setting Name="Remember" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="OVERTIME_SYSTEMConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=DESKTOP-7SDHT04;Initial Catalog=OVERTIME_SYSTEM;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=DESKTOP-7SDHT04;Initial Catalog=OVERTIME_SYSTEM;Integrated Security=True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

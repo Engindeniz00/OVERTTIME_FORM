@@ -7,14 +7,23 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OVERTIME_PROJECT_01", "OVER
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Community|Any CPU = Community|Any CPU
 		Debug|Any CPU = Debug|Any CPU
+		Demo|Any CPU = Demo|Any CPU
 		Release|Any CPU = Release|Any CPU
+		WinForms|Any CPU = WinForms|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDC15271-2E57-4044-8BDE-A6733F00043F}.Community|Any CPU.ActiveCfg = Release|Any CPU
+		{CDC15271-2E57-4044-8BDE-A6733F00043F}.Community|Any CPU.Build.0 = Release|Any CPU
 		{CDC15271-2E57-4044-8BDE-A6733F00043F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CDC15271-2E57-4044-8BDE-A6733F00043F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDC15271-2E57-4044-8BDE-A6733F00043F}.Demo|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDC15271-2E57-4044-8BDE-A6733F00043F}.Demo|Any CPU.Build.0 = Debug|Any CPU
 		{CDC15271-2E57-4044-8BDE-A6733F00043F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDC15271-2E57-4044-8BDE-A6733F00043F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDC15271-2E57-4044-8BDE-A6733F00043F}.WinForms|Any CPU.ActiveCfg = Release|Any CPU
+		{CDC15271-2E57-4044-8BDE-A6733F00043F}.WinForms|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

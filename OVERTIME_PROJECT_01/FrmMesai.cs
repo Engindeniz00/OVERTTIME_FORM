@@ -107,8 +107,7 @@ namespace OVERTIME_PROJECT_01
             {
                 if(mesaiSure.BackColor == Color.LightGray)
                 {
-                    sorgu = string.Format(@"INSERT INTO [dbo].[dbMesai]                 (MesaiBaslamaTarihiSaat,MesaiBitisTarihiSaat,MesaiNedeni,MesaiSignatureId,MesaiSure,MesaiTuru,CalisanId,MesaiDurumId) VALUES('{0}','{1}','{2}',{3},'{4}','{5}',{6},
-                      {7})", mesaiStarTime.Value.ToString("yyyy-MM-dd HH:mm"), mesaiFinishTime.Value.ToString("yyyy-MM-dd HH:mm"), mesaiNedenText.Text, 2, mesaiSure.Text, _izinTuru(), personelKomboBox.SelectedValue,6);
+                    sorgu = string.Format(@"INSERT INTO [dbo].[dbMesai]                 (MesaiBaslamaTarihiSaat,MesaiBitisTarihiSaat,MesaiNedeni,MesaiSure,MesaiTuru,CalisanId,MesaiDurumId) VALUES('{0}','{1}','{2}','{3}','{4}',{5},{6})", mesaiStarTime.Value.ToString("yyyy-MM-dd HH:mm"), mesaiFinishTime.Value.ToString("yyyy-MM-dd HH:mm"), mesaiNedenText.Text,mesaiSure.Text, _izinTuru(), personelKomboBox.SelectedValue,6);
 
                     if (Utils.ExecuteCommand(sorgu))
                     {
@@ -247,6 +246,16 @@ namespace OVERTIME_PROJECT_01
             mesaiStarTime.Value = DateTime.Now;
             mesaiFinishTime.Value = DateTime.Now;
             mesaiNedenText.Clear();
+        }
+
+        private void rprGosterButton_Click(object sender, EventArgs e)
+        {
+            FrmFastReport frmFastReport = new FrmFastReport();
+            this.Hide();
+            frmFastReport.ShowDialog();
+            this.FrmMesai_Load(sender,e);
+            this.Show();
+
         }
     }
 }

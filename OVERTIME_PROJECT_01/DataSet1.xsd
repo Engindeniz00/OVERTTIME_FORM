@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OVERTIME_SYSTEMConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="OVERTIME_SYSTEMConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.OVERTIME_PROJECT_01.Properties.Settings.GlobalReference.Default.OVERTIME_SYSTEMConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dbOverShiftAllDatasTableAdapter" GeneratorDataComponentClassName="dbOverShiftAllDatasTableAdapter" Name="dbOverShiftAllDatas" UserDataComponentName="dbOverShiftAllDatasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="OVERTIME_SYSTEMConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT mes.Id, mes.MesaiBaslamaTarihiSaat, mes.MesaiBitisTarihiSaat, mes.MesaiNedeni, mes.MesaiSure, mes.MesaiTuru, mes.CalisanId, mes.MesaiDurumId, mes.MesaiIptalNedenText, cal.Id AS PersonelId, cal.PersonelAdiSoyadi, cal.PersonelSifre, 
+                  cal.PersonelGorevId, gor.Id AS GorevId, gor.GorevKodu, gor.GorevAdi, dur.Id AS DurumId, dur.DurumKodu, dur.DurumAdi, imz.Id AS ImzaId, imz.ImzaGoruntu, imz.MesaiId
+FROM     dbMesai AS mes INNER JOIN
+                  dbCalisan AS cal ON mes.CalisanId = cal.Id INNER JOIN
+                  dbGorev AS gor ON cal.PersonelGorevId = gor.Id INNER JOIN
+                  dbDurum AS dur ON mes.MesaiDurumId = dur.Id LEFT OUTER JOIN
+                  dbImza AS imz ON imz.MesaiId = mes.Id
+WHERE  (dur.Id = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="MesaiBaslamaTarihiSaat" DataSetColumn="MesaiBaslamaTarihiSaat" />
+              <Mapping SourceColumn="MesaiBitisTarihiSaat" DataSetColumn="MesaiBitisTarihiSaat" />
+              <Mapping SourceColumn="MesaiNedeni" DataSetColumn="MesaiNedeni" />
+              <Mapping SourceColumn="MesaiSure" DataSetColumn="MesaiSure" />
+              <Mapping SourceColumn="MesaiTuru" DataSetColumn="MesaiTuru" />
+              <Mapping SourceColumn="CalisanId" DataSetColumn="CalisanId" />
+              <Mapping SourceColumn="MesaiDurumId" DataSetColumn="MesaiDurumId" />
+              <Mapping SourceColumn="MesaiIptalNedenText" DataSetColumn="MesaiIptalNedenText" />
+              <Mapping SourceColumn="PersonelAdiSoyadi" DataSetColumn="PersonelAdiSoyadi" />
+              <Mapping SourceColumn="PersonelSifre" DataSetColumn="PersonelSifre" />
+              <Mapping SourceColumn="PersonelGorevId" DataSetColumn="PersonelGorevId" />
+              <Mapping SourceColumn="GorevKodu" DataSetColumn="GorevKodu" />
+              <Mapping SourceColumn="GorevAdi" DataSetColumn="GorevAdi" />
+              <Mapping SourceColumn="DurumKodu" DataSetColumn="DurumKodu" />
+              <Mapping SourceColumn="DurumAdi" DataSetColumn="DurumAdi" />
+              <Mapping SourceColumn="ImzaGoruntu" DataSetColumn="ImzaGoruntu" />
+              <Mapping SourceColumn="MesaiId" DataSetColumn="MesaiId" />
+              <Mapping SourceColumn="PersonelId" DataSetColumn="PersonelId" />
+              <Mapping SourceColumn="GorevId" DataSetColumn="GorevId" />
+              <Mapping SourceColumn="DurumId" DataSetColumn="DurumId" />
+              <Mapping SourceColumn="ImzaId" DataSetColumn="ImzaId" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dbOverShiftAllDatas" msprop:Generator_TableClassName="dbOverShiftAllDatasDataTable" msprop:Generator_TableVarName="tabledbOverShiftAllDatas" msprop:Generator_RowChangedName="dbOverShiftAllDatasRowChanged" msprop:Generator_TablePropName="dbOverShiftAllDatas" msprop:Generator_RowDeletingName="dbOverShiftAllDatasRowDeleting" msprop:Generator_RowChangingName="dbOverShiftAllDatasRowChanging" msprop:Generator_RowEvHandlerName="dbOverShiftAllDatasRowChangeEventHandler" msprop:Generator_RowDeletedName="dbOverShiftAllDatasRowDeleted" msprop:Generator_RowClassName="dbOverShiftAllDatasRow" msprop:Generator_UserTableName="dbOverShiftAllDatas" msprop:Generator_RowEvArgName="dbOverShiftAllDatasRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="MesaiBaslamaTarihiSaat" msprop:Generator_ColumnVarNameInTable="columnMesaiBaslamaTarihiSaat" msprop:Generator_ColumnPropNameInRow="MesaiBaslamaTarihiSaat" msprop:Generator_ColumnPropNameInTable="MesaiBaslamaTarihiSaatColumn" msprop:Generator_UserColumnName="MesaiBaslamaTarihiSaat" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MesaiBitisTarihiSaat" msprop:Generator_ColumnVarNameInTable="columnMesaiBitisTarihiSaat" msprop:Generator_ColumnPropNameInRow="MesaiBitisTarihiSaat" msprop:Generator_ColumnPropNameInTable="MesaiBitisTarihiSaatColumn" msprop:Generator_UserColumnName="MesaiBitisTarihiSaat" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MesaiNedeni" msprop:Generator_ColumnVarNameInTable="columnMesaiNedeni" msprop:Generator_ColumnPropNameInRow="MesaiNedeni" msprop:Generator_ColumnPropNameInTable="MesaiNedeniColumn" msprop:Generator_UserColumnName="MesaiNedeni" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MesaiSure" msprop:Generator_ColumnVarNameInTable="columnMesaiSure" msprop:Generator_ColumnPropNameInRow="MesaiSure" msprop:Generator_ColumnPropNameInTable="MesaiSureColumn" msprop:Generator_UserColumnName="MesaiSure" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MesaiTuru" msprop:Generator_ColumnVarNameInTable="columnMesaiTuru" msprop:Generator_ColumnPropNameInRow="MesaiTuru" msprop:Generator_ColumnPropNameInTable="MesaiTuruColumn" msprop:Generator_UserColumnName="MesaiTuru" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CalisanId" msprop:Generator_ColumnVarNameInTable="columnCalisanId" msprop:Generator_ColumnPropNameInRow="CalisanId" msprop:Generator_ColumnPropNameInTable="CalisanIdColumn" msprop:Generator_UserColumnName="CalisanId" type="xs:int" minOccurs="0" />
+              <xs:element name="MesaiDurumId" msprop:Generator_ColumnVarNameInTable="columnMesaiDurumId" msprop:Generator_ColumnPropNameInRow="MesaiDurumId" msprop:Generator_ColumnPropNameInTable="MesaiDurumIdColumn" msprop:Generator_UserColumnName="MesaiDurumId" type="xs:int" minOccurs="0" />
+              <xs:element name="MesaiIptalNedenText" msprop:Generator_ColumnVarNameInTable="columnMesaiIptalNedenText" msprop:Generator_ColumnPropNameInRow="MesaiIptalNedenText" msprop:Generator_ColumnPropNameInTable="MesaiIptalNedenTextColumn" msprop:Generator_UserColumnName="MesaiIptalNedenText" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PersonelAdiSoyadi" msprop:Generator_ColumnVarNameInTable="columnPersonelAdiSoyadi" msprop:Generator_ColumnPropNameInRow="PersonelAdiSoyadi" msprop:Generator_ColumnPropNameInTable="PersonelAdiSoyadiColumn" msprop:Generator_UserColumnName="PersonelAdiSoyadi" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PersonelSifre" msprop:Generator_ColumnVarNameInTable="columnPersonelSifre" msprop:Generator_ColumnPropNameInRow="PersonelSifre" msprop:Generator_ColumnPropNameInTable="PersonelSifreColumn" msprop:Generator_UserColumnName="PersonelSifre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PersonelGorevId" msprop:Generator_ColumnVarNameInTable="columnPersonelGorevId" msprop:Generator_ColumnPropNameInRow="PersonelGorevId" msprop:Generator_ColumnPropNameInTable="PersonelGorevIdColumn" msprop:Generator_UserColumnName="PersonelGorevId" type="xs:int" minOccurs="0" />
+              <xs:element name="GorevKodu" msprop:Generator_ColumnVarNameInTable="columnGorevKodu" msprop:Generator_ColumnPropNameInRow="GorevKodu" msprop:Generator_ColumnPropNameInTable="GorevKoduColumn" msprop:Generator_UserColumnName="GorevKodu" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GorevAdi" msprop:Generator_ColumnVarNameInTable="columnGorevAdi" msprop:Generator_ColumnPropNameInRow="GorevAdi" msprop:Generator_ColumnPropNameInTable="GorevAdiColumn" msprop:Generator_UserColumnName="GorevAdi" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DurumKodu" msprop:Generator_ColumnVarNameInTable="columnDurumKodu" msprop:Generator_ColumnPropNameInRow="DurumKodu" msprop:Generator_ColumnPropNameInTable="DurumKoduColumn" msprop:Generator_UserColumnName="DurumKodu" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DurumAdi" msprop:Generator_ColumnVarNameInTable="columnDurumAdi" msprop:Generator_ColumnPropNameInRow="DurumAdi" msprop:Generator_ColumnPropNameInTable="DurumAdiColumn" msprop:Generator_UserColumnName="DurumAdi" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ImzaGoruntu" msprop:Generator_ColumnVarNameInTable="columnImzaGoruntu" msprop:Generator_ColumnPropNameInRow="ImzaGoruntu" msprop:Generator_ColumnPropNameInTable="ImzaGoruntuColumn" msprop:Generator_UserColumnName="ImzaGoruntu" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="MesaiId" msprop:Generator_ColumnVarNameInTable="columnMesaiId" msprop:Generator_ColumnPropNameInRow="MesaiId" msprop:Generator_ColumnPropNameInTable="MesaiIdColumn" msprop:Generator_UserColumnName="MesaiId" type="xs:int" minOccurs="0" />
+              <xs:element name="PersonelId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnPersonelId" msprop:Generator_ColumnPropNameInRow="PersonelId" msprop:Generator_ColumnPropNameInTable="PersonelIdColumn" msprop:Generator_UserColumnName="PersonelId" type="xs:int" />
+              <xs:element name="GorevId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnGorevId" msprop:Generator_ColumnPropNameInRow="GorevId" msprop:Generator_ColumnPropNameInTable="GorevIdColumn" msprop:Generator_UserColumnName="GorevId" type="xs:int" />
+              <xs:element name="DurumId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnDurumId" msprop:Generator_ColumnPropNameInRow="DurumId" msprop:Generator_ColumnPropNameInTable="DurumIdColumn" msprop:Generator_UserColumnName="DurumId" type="xs:int" />
+              <xs:element name="ImzaId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnImzaId" msprop:Generator_ColumnPropNameInRow="ImzaId" msprop:Generator_ColumnPropNameInTable="ImzaIdColumn" msprop:Generator_UserColumnName="ImzaId" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

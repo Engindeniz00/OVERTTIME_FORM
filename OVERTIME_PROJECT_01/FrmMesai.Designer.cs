@@ -44,12 +44,6 @@ namespace OVERTIME_PROJECT_01
             this.mesaiFinishTime = new System.Windows.Forms.DateTimePicker();
             this.mesaiSure = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.kaydetButton = new System.Windows.Forms.Button();
-            this.durumDegistir = new System.Windows.Forms.Button();
-            this.cikisButon = new System.Windows.Forms.Button();
-            this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label7 = new System.Windows.Forms.Label();
-            this.mesaiNedenText = new System.Windows.Forms.TextBox();
             this.perAdi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.perGor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.starTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -57,8 +51,15 @@ namespace OVERTIME_PROJECT_01
             this.topMesSaat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.mesNeden = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.onayDurumu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.kaydedenPersonel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.durumId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.kaydetButton = new System.Windows.Forms.Button();
+            this.durumDegistir = new System.Windows.Forms.Button();
+            this.cikisButon = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.mesaiNedenText = new System.Windows.Forms.TextBox();
+            this.rprGosterButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -234,63 +235,6 @@ namespace OVERTIME_PROJECT_01
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // kaydetButton
-            // 
-            this.kaydetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kaydetButton.Location = new System.Drawing.Point(72, 616);
-            this.kaydetButton.Name = "kaydetButton";
-            this.kaydetButton.Size = new System.Drawing.Size(194, 69);
-            this.kaydetButton.TabIndex = 13;
-            this.kaydetButton.Text = "Kaydet";
-            this.kaydetButton.UseVisualStyleBackColor = true;
-            this.kaydetButton.Click += new System.EventHandler(this.kaydetButton_Click);
-            // 
-            // durumDegistir
-            // 
-            this.durumDegistir.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.durumDegistir.Location = new System.Drawing.Point(302, 616);
-            this.durumDegistir.Name = "durumDegistir";
-            this.durumDegistir.Size = new System.Drawing.Size(194, 69);
-            this.durumDegistir.TabIndex = 14;
-            this.durumDegistir.Text = "Durum Degistir";
-            this.durumDegistir.UseVisualStyleBackColor = true;
-            this.durumDegistir.Click += new System.EventHandler(this.durumDegistir_Click);
-            // 
-            // cikisButon
-            // 
-            this.cikisButon.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cikisButon.Location = new System.Drawing.Point(526, 614);
-            this.cikisButon.Name = "cikisButon";
-            this.cikisButon.Size = new System.Drawing.Size(194, 69);
-            this.cikisButon.TabIndex = 15;
-            this.cikisButon.Text = "Çıkış";
-            this.cikisButon.UseVisualStyleBackColor = true;
-            this.cikisButon.Click += new System.EventHandler(this.cikisButon_Click);
-            // 
-            // Id
-            // 
-            this.Id.Text = "0";
-            this.Id.Width = 0;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(67, 407);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(144, 25);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Mesai Nedeni";
-            // 
-            // mesaiNedenText
-            // 
-            this.mesaiNedenText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.mesaiNedenText.Location = new System.Drawing.Point(418, 409);
-            this.mesaiNedenText.Multiline = true;
-            this.mesaiNedenText.Name = "mesaiNedenText";
-            this.mesaiNedenText.Size = new System.Drawing.Size(264, 157);
-            this.mesaiNedenText.TabIndex = 17;
-            // 
             // perAdi
             // 
             this.perAdi.Text = "Personel Adı";
@@ -333,6 +277,11 @@ namespace OVERTIME_PROJECT_01
             this.onayDurumu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.onayDurumu.Width = 150;
             // 
+            // Id
+            // 
+            this.Id.Text = "0";
+            this.Id.Width = 0;
+            // 
             // kaydedenPersonel
             // 
             this.kaydedenPersonel.Text = "";
@@ -344,11 +293,75 @@ namespace OVERTIME_PROJECT_01
             this.durumId.Text = "";
             this.durumId.Width = 0;
             // 
+            // kaydetButton
+            // 
+            this.kaydetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kaydetButton.Location = new System.Drawing.Point(72, 616);
+            this.kaydetButton.Name = "kaydetButton";
+            this.kaydetButton.Size = new System.Drawing.Size(194, 69);
+            this.kaydetButton.TabIndex = 13;
+            this.kaydetButton.Text = "Kaydet";
+            this.kaydetButton.UseVisualStyleBackColor = true;
+            this.kaydetButton.Click += new System.EventHandler(this.kaydetButton_Click);
+            // 
+            // durumDegistir
+            // 
+            this.durumDegistir.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.durumDegistir.Location = new System.Drawing.Point(302, 616);
+            this.durumDegistir.Name = "durumDegistir";
+            this.durumDegistir.Size = new System.Drawing.Size(194, 69);
+            this.durumDegistir.TabIndex = 14;
+            this.durumDegistir.Text = "Durum Degistir";
+            this.durumDegistir.UseVisualStyleBackColor = true;
+            this.durumDegistir.Click += new System.EventHandler(this.durumDegistir_Click);
+            // 
+            // cikisButon
+            // 
+            this.cikisButon.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cikisButon.Location = new System.Drawing.Point(532, 616);
+            this.cikisButon.Name = "cikisButon";
+            this.cikisButon.Size = new System.Drawing.Size(194, 69);
+            this.cikisButon.TabIndex = 15;
+            this.cikisButon.Text = "Çıkış";
+            this.cikisButon.UseVisualStyleBackColor = true;
+            this.cikisButon.Click += new System.EventHandler(this.cikisButon_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(67, 407);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(144, 25);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Mesai Nedeni";
+            // 
+            // mesaiNedenText
+            // 
+            this.mesaiNedenText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.mesaiNedenText.Location = new System.Drawing.Point(418, 409);
+            this.mesaiNedenText.Multiline = true;
+            this.mesaiNedenText.Name = "mesaiNedenText";
+            this.mesaiNedenText.Size = new System.Drawing.Size(264, 157);
+            this.mesaiNedenText.TabIndex = 17;
+            // 
+            // rprGosterButton
+            // 
+            this.rprGosterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rprGosterButton.Location = new System.Drawing.Point(761, 614);
+            this.rprGosterButton.Name = "rprGosterButton";
+            this.rprGosterButton.Size = new System.Drawing.Size(194, 69);
+            this.rprGosterButton.TabIndex = 18;
+            this.rprGosterButton.Text = "Rapor İşlemleri";
+            this.rprGosterButton.UseVisualStyleBackColor = true;
+            this.rprGosterButton.Click += new System.EventHandler(this.rprGosterButton_Click);
+            // 
             // FrmMesai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1376, 986);
+            this.Controls.Add(this.rprGosterButton);
             this.Controls.Add(this.mesaiNedenText);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cikisButon);
@@ -409,5 +422,6 @@ namespace OVERTIME_PROJECT_01
         private System.Windows.Forms.ColumnHeader onayDurumu;
         private System.Windows.Forms.ColumnHeader kaydedenPersonel;
         private System.Windows.Forms.ColumnHeader durumId;
+        private System.Windows.Forms.Button rprGosterButton;
     }
 }

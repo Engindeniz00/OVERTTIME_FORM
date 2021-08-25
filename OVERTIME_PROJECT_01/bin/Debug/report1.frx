@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="08/23/2021 23:12:42" ReportInfo.Modified="08/25/2021 11:45:09" ReportInfo.CreatorVersion="2021.3.28.0">
+  <Dictionary>
+    <TableDataSource Name="dbOverShiftAllDatas" ReferenceName="dataSet1.dbOverShiftAllDatas" DataType="System.Int32" Enabled="true">
+      <Column Name="Id" DataType="System.Int32"/>
+      <Column Name="MesaiBaslamaTarihiSaat" DataType="System.DateTime"/>
+      <Column Name="MesaiBitisTarihiSaat" DataType="System.DateTime"/>
+      <Column Name="MesaiNedeni" DataType="System.String"/>
+      <Column Name="MesaiSure" DataType="System.String"/>
+      <Column Name="MesaiTuru" DataType="System.String"/>
+      <Column Name="CalisanId" DataType="System.Int32"/>
+      <Column Name="MesaiDurumId" DataType="System.Int32"/>
+      <Column Name="MesaiIptalNedenText" DataType="System.String"/>
+      <Column Name="PersonelAdiSoyadi" DataType="System.String"/>
+      <Column Name="PersonelSifre" DataType="System.String"/>
+      <Column Name="PersonelGorevId" DataType="System.Int32"/>
+      <Column Name="GorevKodu" DataType="System.String"/>
+      <Column Name="GorevAdi" DataType="System.String"/>
+      <Column Name="DurumKodu" DataType="System.String"/>
+      <Column Name="DurumAdi" DataType="System.String"/>
+      <Column Name="ImzaGoruntu" DataType="System.Byte[]" BindableControl="Picture"/>
+      <Column Name="MesaiId" DataType="System.Int32"/>
+      <Column Name="PersonelId" DataType="System.Int32"/>
+      <Column Name="GorevId" DataType="System.Int32"/>
+      <Column Name="DurumId" DataType="System.Int32"/>
+      <Column Name="ImzaId" DataType="System.Int32"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1" Fill="Glass" Fill.Color="White" Fill.Blend="0.2" Fill.Hatch="true" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="28.35">
+      <TextObject Name="Text1" Left="245.7" Top="-18.9" Width="245.7" Height="28.35" Text="MESAİ FORMU" HorzAlign="Center" Font="Arial Black, 16.2pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="31.55" Width="718.2" Height="9.45"/>
+    <GroupHeaderBand Name="GroupHeader1" Top="44.2" Width="718.2" Height="37.8" Fill="LinearGradient" Fill.StartColor="SteelBlue" Fill.EndColor="White" Fill.Angle="0" Fill.Focus="1" Fill.Contrast="0.55" Condition="[dbOverShiftAllDatas.Id]">
+      <TextObject Name="Text2" Left="28.35" Width="519.75" Height="37.8" Text="[dbOverShiftAllDatas.PersonelAdiSoyadi]" VertAlign="Center" Font="Arial Black, 16.2pt, style=Bold" TextFill.Color="BlanchedAlmond"/>
+      <DataBand Name="Data1" Top="85.2" Width="718.2" Height="189" Fill="PathGradient" Fill.CenterColor="LightSkyBlue" Fill.EdgeColor="White" Fill.Style="Elliptic" DataSource="dbOverShiftAllDatas">
+        <TextObject Name="Text3" Left="274.05" Top="37.8" Width="368.55" Height="18.9" Text="[dbOverShiftAllDatas.MesaiBaslamaTarihiSaat]" Format="Date" Format.Format="f" Font="Arial Black, 10.2pt, style=Bold"/>
+        <TextObject Name="Text5" Left="28.35" Top="37.8" Width="217.35" Height="18.9" Text="Mesai Başlama Tarih/Saat : " HorzAlign="Right" Font="Arial Black, 10.2pt, style=Bold"/>
+        <TextObject Name="Text6" Left="274.05" Top="66.15" Width="349.65" Height="18.9" Text="[dbOverShiftAllDatas.MesaiBitisTarihiSaat]" Format="Date" Format.Format="f" Font="Arial Black, 10.2pt, style=Bold"/>
+        <TextObject Name="Text7" Left="28.35" Top="66.15" Width="217.35" Height="18.9" Text="Mesai Bitiş Tarih/Saat : " HorzAlign="Right" Font="Arial Black, 10.2pt, style=Bold"/>
+        <TextObject Name="Text8" Left="274.05" Top="94.5" Width="349.65" Height="18.9" Text="[dbOverShiftAllDatas.MesaiSure]" Format="Date" Format.Format="d" Font="Arial Black, 10.2pt, style=Bold"/>
+        <TextObject Name="Text9" Left="28.35" Top="94.5" Width="217.35" Height="18.9" Text="Mesai Süre : " HorzAlign="Right" Font="Arial Black, 10.2pt, style=Bold"/>
+        <TextObject Name="Text10" Left="274.05" Top="122.85" Width="349.65" Height="18.9" Text="[dbOverShiftAllDatas.MesaiTuru]" Format="Date" Format.Format="d" Font="Arial Black, 10.2pt, style=Bold"/>
+        <TextObject Name="Text11" Left="28.35" Top="122.85" Width="217.35" Height="18.9" Text="İzin Olarak Kullanılacak : " HorzAlign="Right" Font="Arial Black, 10.2pt, style=Bold"/>
+        <TextObject Name="Text12" Left="274.05" Top="151.2" Width="349.65" Height="18.9" Text="[dbOverShiftAllDatas.MesaiNedeni]" Format="Date" Format.Format="d" Font="Arial Black, 10.2pt, style=Bold"/>
+        <TextObject Name="Text13" Left="28.35" Top="151.2" Width="217.35" Height="18.9" Text="Mesai Neden : " HorzAlign="Right" Font="Arial Black, 10.2pt, style=Bold"/>
+        <TextObject Name="Text14" Left="274.05" Top="9.45" Width="368.55" Height="18.9" Text="[dbOverShiftAllDatas.GorevAdi]" Format="Date" Format.Format="d" Font="Arial Black, 10.2pt, style=Bold"/>
+        <TextObject Name="Text15" Left="28.35" Top="9.45" Width="217.35" Height="18.9" Text="Görev  :" HorzAlign="Right" Font="Arial Black, 10.2pt, style=Bold"/>
+        <PictureObject Name="Picture1" Left="500.85" Top="75.6" Width="207.9" Height="113.4" DataColumn="dbOverShiftAllDatas.ImzaGoruntu"/>
+        <TextObject Name="Text16" Left="548.1" Top="47.25" Width="132.3" Height="18.9" Text="PERSONEL İMZA" HorzAlign="Center" Font="Arial, 10.2pt, style=Bold"/>
+      </DataBand>
+      <GroupFooterBand Name="GroupFooter1" Top="277.4" Width="718.2" Height="9.45"/>
+    </GroupHeaderBand>
+    <PageFooterBand Name="PageFooter1" Top="290.05" Width="718.2" Height="28.35"/>
+  </ReportPage>
+</Report>

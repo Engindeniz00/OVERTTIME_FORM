@@ -5,10 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.Windows.Forms;
+using System.IO;
 
 namespace OVERTIME_PROJECT_01
 {
-    public static class Utils
+    public class Utils
     {
         #region variables
         public static int personelUnvanId;
@@ -20,9 +24,6 @@ namespace OVERTIME_PROJECT_01
         public static int onayId;
         public static bool isSelected;
         #endregion variables
-
-
-
 
         #region sql_baglanti
         private static string connStr = "Data Source=.;Initial Catalog=OVERTIME_SYSTEM;Integrated Security=True";
@@ -90,7 +91,29 @@ namespace OVERTIME_PROJECT_01
                 return false;
             }
         }
+        public static bool ExecuteCommandByParameter(string command,byte[] img_binary_data_array,int shift_id)
+        {
+            ConnectionSupply();
+            SqlCommand sqlCommand = new SqlCommand(command, sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@arr", img_binary_data_array);
+            sqlCommand.Parameters.AddWithValue("@shift_id", shift_id);
 
+            try
+            {
+                sqlCommand.ExecuteNonQuery();
+                sqlCommand.Parameters.Clear();
+                sqlCommand.Dispose();
+                CloseConnection();
+                return true;
+            }
+            catch (Exception e)
+            {
+                CloseConnection();
+                throw e;
+                return false;
+            }
+        }
+        
         public static int ReturnIntegerSingleValue(string command)
         {
             int value=0;
@@ -119,6 +142,25 @@ namespace OVERTIME_PROJECT_01
             try
             {
                 value = sqlCommand.ExecuteScalar().ToString() ;
+                CloseConnection();
+                return value;
+
+            }
+            catch
+            {
+                CloseConnection();
+                return value;
+            }
+        }        
+        public static byte[] ReturnByteArraySingleValue(string command)
+        {
+            byte[] value = null;
+            ConnectionSupply();
+            SqlCommand sqlCommand = new SqlCommand(command, sqlConnection);
+
+            try
+            {
+                value = (byte[])sqlCommand.ExecuteScalar();
                 CloseConnection();
                 return value;
 
@@ -185,8 +227,6 @@ namespace OVERTIME_PROJECT_01
             return hour;
         }
         #endregion hour_calculate
-
-
 
     }
 }
