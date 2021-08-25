@@ -73,7 +73,6 @@ namespace OVERTIME_PROJECT_01
                         stream.Position = 0;
                         stream.Dispose();
                     }
-                    report1.Dispose();
                     pDFExport.Dispose();
                 }
                 MessageBox.Show("Başarılı bir şekilde kaydedildi", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -82,15 +81,22 @@ namespace OVERTIME_PROJECT_01
             {
                 throw exception;
             }
-        }
 
-        private void rprMailGonder_Click(object sender, EventArgs e)
+            var result = MessageBox.Show("Rapor kaydedildi. Mail gönderilsin mi?","Soru",MessageBoxButtons.YesNo,MessageBoxIcon.Information);
+
+            if(result == DialogResult.Yes)
+            {
+                FrmMailGonder frmMailGonder = new FrmMailGonder();
+                this.Hide();
+                frmMailGonder.ShowDialog();
+                FrmFastReport_Load(sender, e);
+                this.Show();
+            }
+        }
+        
+        private void Notlar()
         {
-            FrmMailGonder frmMailGonder = new FrmMailGonder();
-            this.Hide();
-            frmMailGonder.ShowDialog();
-            FrmFastReport_Load(sender,e);
-            this.Show();
+            // Burada bir item'e dispose verdiğimiz zaman ona ait bütün verileri ram üzerinden temizliyor.
         }
     }
 }

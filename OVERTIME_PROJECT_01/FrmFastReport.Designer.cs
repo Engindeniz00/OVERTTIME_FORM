@@ -37,7 +37,6 @@ namespace OVERTIME_PROJECT_01
             this.dbOverShiftAllDatasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dbOverShiftAllDatasTableAdapter = new OVERTIME_PROJECT_01.DataSet1TableAdapters.dbOverShiftAllDatasTableAdapter();
             this.rprKaydetButton = new System.Windows.Forms.Button();
-            this.rprMailGonder = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.report1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbOverShiftAllDatasBindingSource)).BeginInit();
@@ -46,7 +45,7 @@ namespace OVERTIME_PROJECT_01
             // gosterButon
             // 
             this.gosterButon.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gosterButon.Location = new System.Drawing.Point(12, 143);
+            this.gosterButon.Location = new System.Drawing.Point(157, 143);
             this.gosterButon.Name = "gosterButon";
             this.gosterButon.Size = new System.Drawing.Size(264, 105);
             this.gosterButon.TabIndex = 0;
@@ -78,31 +77,19 @@ namespace OVERTIME_PROJECT_01
             // rprKaydetButton
             // 
             this.rprKaydetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rprKaydetButton.Location = new System.Drawing.Point(298, 143);
+            this.rprKaydetButton.Location = new System.Drawing.Point(450, 143);
             this.rprKaydetButton.Name = "rprKaydetButton";
             this.rprKaydetButton.Size = new System.Drawing.Size(264, 105);
             this.rprKaydetButton.TabIndex = 1;
-            this.rprKaydetButton.Text = "Raporu Kaydet";
+            this.rprKaydetButton.Text = "Raporu Kaydet ve Mail Gönder";
             this.rprKaydetButton.UseVisualStyleBackColor = true;
             this.rprKaydetButton.Click += new System.EventHandler(this.rprKaydetButton_Click);
-            // 
-            // rprMailGonder
-            // 
-            this.rprMailGonder.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rprMailGonder.Location = new System.Drawing.Point(582, 143);
-            this.rprMailGonder.Name = "rprMailGonder";
-            this.rprMailGonder.Size = new System.Drawing.Size(264, 105);
-            this.rprMailGonder.TabIndex = 2;
-            this.rprMailGonder.Text = "Raporu Mail Gönder";
-            this.rprMailGonder.UseVisualStyleBackColor = true;
-            this.rprMailGonder.Click += new System.EventHandler(this.rprMailGonder_Click);
             // 
             // FrmFastReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(857, 450);
-            this.Controls.Add(this.rprMailGonder);
             this.Controls.Add(this.rprKaydetButton);
             this.Controls.Add(this.gosterButon);
             this.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dbOverShiftAllDatasBindingSource, "Id", true));
@@ -123,6 +110,5 @@ namespace OVERTIME_PROJECT_01
         private System.Windows.Forms.BindingSource dbOverShiftAllDatasBindingSource;
         private DataSet1TableAdapters.dbOverShiftAllDatasTableAdapter dbOverShiftAllDatasTableAdapter;
         private System.Windows.Forms.Button rprKaydetButton;
-        private System.Windows.Forms.Button rprMailGonder;
     }
 }

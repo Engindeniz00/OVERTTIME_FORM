@@ -39,9 +39,51 @@ namespace OVERTIME_PROJECT_01
 
         private void sendButton_Click(object sender, EventArgs e)
         {
-            SendMail(emailText.Text);
-            emailText.Clear();
-            ccTextBox.Clear();
+            if (ccCheck.Checked)
+            {
+                if (EmailValidation(emailText.Text) && EmailValidation(ccTextBox.Text))
+                {
+                    SendMail(ccTextBox.Text);
+                    emailText.Clear();
+                    ccTextBox.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Lütfen mail adreslerini doğru bir şekilde giriniz!","Uyarı",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+
+                    if (!EmailValidation(emailText.Text) && EmailValidation(ccTextBox.Text))
+                    {
+                        emailText.Focus();
+                        emailText.SelectAll();
+                    }
+                    else if(EmailValidation(emailText.Text) && !EmailValidation(ccTextBox.Text))
+                    {
+                        ccTextBox.Focus();
+                        ccTextBox.SelectAll();
+                    }
+                    else if (!EmailValidation(emailText.Text) && !EmailValidation(ccTextBox.Text))
+                    {
+                        emailText.Focus();
+                        emailText.SelectAll();
+                    }
+                }
+            }
+            else
+            {
+                if (EmailValidation(emailText.Text))
+                {
+                    SendMail(ccTextBox.Text);
+                    emailText.Clear();
+                    ccTextBox.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Lütfen mail adresini doğru bir şekilde giriniz!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    emailText.Focus();
+                    emailText.SelectAll();
+                }
+            }
+
         }
 
 
@@ -120,6 +162,19 @@ namespace OVERTIME_PROJECT_01
                 MessageBox.Show("Mailler Başarılı Bir Şekilde Gönderildi", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
+        }
+
+        private bool EmailValidation(string mailAddress)
+        {
+            try
+            {
+                MailAddress m = new MailAddress(mailAddress);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
     }
