@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Net.Mail;
 using System.Net;
@@ -41,9 +43,9 @@ namespace OVERTIME_PROJECT_01
         {
             if (ccCheck.Checked)
             {
-                if (EmailValidation(emailText.Text) && EmailValidation(ccTextBox.Text))
+                if (IsValidEmail(emailText.Text) && IsValidEmail(ccTextBox.Text))
                 {
-                    SendMail(ccTextBox.Text);
+                    SendMail(emailText.Text);
                     emailText.Clear();
                     ccTextBox.Clear();
                 }
@@ -51,17 +53,17 @@ namespace OVERTIME_PROJECT_01
                 {
                     MessageBox.Show("Lütfen mail adreslerini doğru bir şekilde giriniz!","Uyarı",MessageBoxButtons.OK,MessageBoxIcon.Warning);
 
-                    if (!EmailValidation(emailText.Text) && EmailValidation(ccTextBox.Text))
+                    if (!IsValidEmail(emailText.Text) && IsValidEmail(ccTextBox.Text))
                     {
                         emailText.Focus();
                         emailText.SelectAll();
                     }
-                    else if(EmailValidation(emailText.Text) && !EmailValidation(ccTextBox.Text))
+                    else if(IsValidEmail(emailText.Text) && !IsValidEmail(ccTextBox.Text))
                     {
                         ccTextBox.Focus();
                         ccTextBox.SelectAll();
                     }
-                    else if (!EmailValidation(emailText.Text) && !EmailValidation(ccTextBox.Text))
+                    else if (!IsValidEmail(emailText.Text) && !IsValidEmail(ccTextBox.Text))
                     {
                         emailText.Focus();
                         emailText.SelectAll();
@@ -70,9 +72,9 @@ namespace OVERTIME_PROJECT_01
             }
             else
             {
-                if (EmailValidation(emailText.Text))
+                if (IsValidEmail(emailText.Text))
                 {
-                    SendMail(ccTextBox.Text);
+                    SendMail(emailText.Text);
                     emailText.Clear();
                     ccTextBox.Clear();
                 }
@@ -164,14 +166,46 @@ namespace OVERTIME_PROJECT_01
             
         }
 
-        private bool EmailValidation(string mailAddress)
+
+        private bool IsValidEmail(string email)
         {
+            if (string.IsNullOrWhiteSpace(email))
+                return false;
+
             try
             {
-                MailAddress m = new MailAddress(mailAddress);
-                return true;
+                // Normalize the domain
+                email = Regex.Replace(email, @"(@)(.+)$", DomainMapper,
+                                      RegexOptions.None, TimeSpan.FromMilliseconds(200));
+
+                // Examines the domain part of the email and normalizes it.
+                string DomainMapper(Match match)
+                {
+                    // Use IdnMapping class to convert Unicode domain names.
+                    var idn = new IdnMapping();
+
+                    // Pull out and process domain name (throws ArgumentException on invalid)
+                    string domainName = idn.GetAscii(match.Groups[2].Value);
+
+                    return match.Groups[1].Value + domainName;
+                }
             }
-            catch
+            catch (RegexMatchTimeoutException e)
+            {
+                return false;
+            }
+            catch (ArgumentException e)
+            {
+                return false;
+            }
+
+            try
+            {
+                return Regex.IsMatch(email,
+                    @"^[^@\s]+@[^@\s]+\.[^@\s]+$",
+                    RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250));
+            }
+            catch (RegexMatchTimeoutException)
             {
                 return false;
             }
